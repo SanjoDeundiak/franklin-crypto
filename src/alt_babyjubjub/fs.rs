@@ -268,7 +268,7 @@ impl ::std::fmt::Display for Fs
 }
 
 impl ::rand::Rand for Fs {
-    fn rand<R: ::rand::Rng>(rng: &mut R) -> Self {
+    pub fn rand<R: ::rand::Rng>(rng: &mut R) -> Self {
         loop {
             let mut tmp = Fs(FsRepr::rand(rng));
 
